@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - PaintPro</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <a href="index.html" class="text-2xl font-bold text-purple-600 hover:text-purple-700 transition-colors duration-300"><img src="asset/logo.png" alt="" style="height: 70px;
+    "></a>
+    <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+      <li><a href="index.html" class="  hover:text-purple-300">Home</a></li>
+      <li><a href="about.html" class="hover:text-purple-600 transition-colors duration-300">About</a></li>
+      <li><a href="gallery.html" class="text-purple-600 font-semibold hover:text-purple-600 transition-colors duration-700">Gallery</a></li>
+      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
+      <li><a href="enquiry.html" id="lang-toggle" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for Call</a></li>
+    </ul>
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-lg transform scale-y-0 origin-top transition-transform duration-300">
+    <ul class="flex flex-col space-y-2 px-6 py-4 font-medium text-gray-700">
+      <li><a href="index.html" class="text-purple-600 font-semibold">Home</a></li>
+      <li><a href="about.html" class="hover:text-purple-600 transition-colors duration-300">About</a></li>
+      <li><a href="gallery.html" class="hover:text-purple-600 transition-colors duration-300">Gallery</a></li>
+      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
+      <li><button id="lang-toggle-mobile" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for call</button></li>
+    </ul>
+  </div>
+  <div id="menu" class="hidden md:hidden bg-white shadow-md">
+    <ul class="flex flex-col space-y-4 px-6 py-4 text-center font-medium">
+      <li><a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a></li>
+      <li><a href="about.html" class="text-gray-700 hover:text-purple-600 transition">About</a></li>
+      <li><a href="gallery.html" class="text-gray-700 hover:text-purple-600 transition">Gallery</a></li>
+      <li><a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-purple-600 to-purple-500 text-white py-28 text-center px-4" style="background-image: url('asset/About.png'); background-size: cover; background-position: center; color: rgb(255, 255, 255);">
+  <h1 class="text-5xl md:text-6xl font-bold mb-4" style="margin-left: 500px;">Our Painting Gallery</h1>
+  <p class="max-w-2xl mx-auto text-lg md:text-xl" style="margin-left: 530px;">Explore our professional projects and see how we transform spaces with creativity and expertise.</p>
+</section>
+
+<!-- Gallery Grid -->
+<section class="py-20 container mx-auto px-4">
+  <h2 class="text-3xl font-bold text-purple-600 text-center mb-12">Recent Projects</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+    
+    <!-- Gallery Item -->
+     <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/wall decorative.jpeg" alt="Office Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Wall Decorative painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/cloth banner.png" alt="Residential Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Banner Painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/aakshwani jalgaon.jpeg" alt="Office Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Wall painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/gate name.jpeg" alt="Exterior Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Wall painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/gate painting.jpeg" alt="Decorative Walls" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Exterior painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/heading.jpeg" alt="Sign Boards" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Sign Boards</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/home paint.png" alt="Commercial Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Home Exterior Painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/wall drawing.jpeg" alt="Commercial Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Wall decoretive Painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/signbourd.jpeg" alt="Commercial Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Sign Bourd Painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/murti2.jpeg" alt="Commercial Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Decoretive Painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/shutter sign bourd.jpeg" alt="Commercial Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Sign Bourd Painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/schoolwall.jpeg" alt="Commercial Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Wall Decoretive Painting</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer relative group">
+      <img src="gallery/orient.jpeg" alt="Commercial Painting" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+        <p class="text-white text-lg font-semibold">Commercial Painting</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-purple-600 text-white py-8 mt-16">
+  <div class="container mx-auto text-center">
+    <p>© 2025 PaintPro - Professional Painting Services. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 mt-4">
+      <a href="#"><img src="assets/icons/facebook.png" class="w-6 h-6"></a>
+      <a href="#"><img src="assets/icons/instagram.png" class="w-6 h-6"></a>
+      <a href="#"><img src="assets/icons/twitter.png" class="w-6 h-6"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

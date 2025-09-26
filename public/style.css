@@ -1,0 +1,28 @@
+:root {
+  --primary: #6B46C1;
+  --secondary: #FFFFFF;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--secondary);
+  color: #333;
+}
+
+a { text-decoration: none; }
+
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #1D4ED8; /* Tailwind blue-700 */
+}

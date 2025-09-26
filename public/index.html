@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShriSamarthArt - Professional Painting Services</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <a href="index.html" class="text-2xl font-bold text-purple-600 hover:text-purple-700 transition-colors duration-300"><img src="asset/logo.png" alt="" style="height: 70px;
+    "></a>
+    <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+      <li><a href="index.html" class="text-purple-600 font-semibold hover:text-purple-700">Home</a></li>
+      <li><a href="about.html" class="hover:text-purple-600 transition-colors duration-300">About</a></li>
+      <li><a href="gallery.html" class="hover:text-purple-600 transition-colors duration-300">Gallery</a></li>
+      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
+      <li><a href="enquiry.html" id="lang-toggle" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for Call</a></li>
+    </ul>
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-lg transform scale-y-0 origin-top transition-transform duration-300">
+    <ul class="flex flex-col space-y-2 px-6 py-4 font-medium text-gray-700">
+      <li><a href="index.html" class="text-purple-600 font-semibold">Home</a></li>
+      <li><a href="about.html" class="hover:text-purple-600 transition-colors duration-300">About</a></li>
+      <li><a href="gallery.html" class="hover:text-purple-600 transition-colors duration-300">Gallery</a></li>
+      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
+      <li><button id="lang-toggle-mobile" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for call</button></li>
+    </ul>
+  </div>
+  <div id="menu" class="hidden md:hidden bg-white shadow-md">
+    <ul class="flex flex-col space-y-4 px-6 py-4 text-center font-medium">
+      <li><a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a></li>
+      <li><a href="about.html" class="text-gray-700 hover:text-purple-600 transition">About</a></li>
+      <li><a href="gallery.html" class="text-gray-700 hover:text-purple-600 transition">Gallery</a></li>
+      <li><a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative text-purple-600 bg-cover bg-center" style="color: rgb(107, 45, 125)">
+  <!-- Desktop Background -->
+  <div class="absolute inset-0 hidden md:block bg-cover bg-center" style="background-image: url('asset/heroimg.png'); z-index:-1;"></div>
+  
+  <!-- Mobile Background -->
+  <div class="absolute inset-0 block md:hidden bg-cover bg-center" style="background-image: url('asset/mobilehero.png'); z-index:-1;"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-30 md:py-20 flex items-center min-h-[450px] md:min-h-[500px]">
+    <div class="w-full -mt-12 md:mt-0 text-left" >
+      <!-- Headline -->
+      <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 sm:mb-6">
+        We Paint Your Dreams Into Reality
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl">
+        Complete Painting Solutions for Homes, Offices, and Commercial Spaces – 
+        with premium quality finishes and trusted experience.
+      </p>
+
+      <!-- Owner Info -->
+      <div class="mb-8 sm:mb-10">
+        <p class="text-base sm:text-lg md:text-2xl font-bold">
+          Painter – SAHEBRAO K. CHAUDHARI
+        </p>
+        <p class="text-xs sm:text-sm md:text-lg italic opacity-90">
+          (Owner & Professional Painter | 30+ Years of Expertise)
+        </p>
+      </div>
+
+      <!-- Call to Action -->
+      <a href="enquiry.html"
+   class="inline-block bg-white text-purple-700 font-semibold px-5 sm:px-6 md:px-8 py-2 sm:py-3 
+          rounded-full shadow-lg border border-purple-700
+          hover:bg-gray-100 hover:shadow-xl transition duration-300 text-sm sm:text-base md:text-lg">
+  Get a Free Enquiry
+</a>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Services Cards Section -->
+<section class="py-12 container mx-auto px-4">
+  <h2 class="text-2xl md:text-3xl font-bold text-purple-600 text-center mb-8">Our Services</h2>
+
+  <div class="flex justify-center gap-6 flex-wrap">
+
+    <!-- Interior Card -->
+    <div class="bg-white shadow-md rounded-lg p-4 text-center w-44 md:w-72 transform hover:scale-105 transition-transform duration-300">
+      <div class="mb-3">
+        <img src="asset/interior img.jfif" alt="Interior Painting" 
+             class="w-full h-32 md:h-40 object-cover rounded-md">
+      </div>
+      <h3 class="text-base md:text-xl font-semibold text-purple-600 mb-1">Interior Painting</h3>
+      <p class="text-gray-600 text-xs md:text-sm mb-3">Stylish and premium finishes for your home interiors.</p>
+      <a href="interior.html" class="inline-block bg-purple-600 text-white px-3 md:px-5 py-1 md:py-2 rounded text-xs md:text-sm hover:bg-purple-700 transition-colors duration-300">See More</a>
+    </div>
+
+    <!-- Exterior Card -->
+    <div class="bg-white shadow-md rounded-lg p-4 text-center w-44 md:w-72 transform hover:scale-105 transition-transform duration-300">
+      <div class="mb-3">
+        <img src="asset/Exterior paint img.jpg" alt="Exterior Painting" 
+             class="w-full h-32 md:h-40 object-cover:fit rounded-md">
+      </div>
+      <h3 class="text-base md:text-xl font-semibold text-purple-600 mb-1">Exterior Painting</h3>
+      <p class="text-gray-600 text-xs md:text-sm mb-3">Durable exterior painting that protects and enhances buildings.</p>
+      <a href="exterior.html" class="inline-block bg-purple-600 text-white px-3 md:px-5 py-1 md:py-2 rounded text-xs md:text-sm hover:bg-purple-700 transition-colors duration-300">See More</a>
+    </div>
+
+    <!-- Sign Board Card -->
+    <div class="bg-white shadow-md rounded-lg p-4 text-center w-44 md:w-72 transform hover:scale-105 transition-transform duration-300">
+      <div class="mb-3">
+        <img src="asset/alltypes.jpg" alt="Sign Board Painting" 
+             class="w-full h-32 md:h-40 object-cover:fit rounded-md">
+      </div>
+      <h3 class="text-base md:text-xl font-semibold text-purple-600 mb-1">All types of painting work</h3>
+      <p class="text-gray-600 text-xs md:text-sm mb-3">Eye-catching and professional sign board designs for businesses.</p>
+      <a href="painting-works.html" class="inline-block bg-purple-600 text-white px-3 md:px-5 py-1 md:py-2 rounded text-xs md:text-sm hover:bg-purple-700 transition-colors duration-300">See More</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Wall Putty Special Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 lg:px-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-purple-700 text-center mb-10">
+      Wall Putty – The Foundation of Perfect Walls
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image Side -->
+      <div class="h-50">
+        <img src="asset/putti.png" alt="Wall Putty Work" 
+             class="rounded-xl shadow-lg hover:scale-105  transition-transform duration-300">
+      </div>
+
+      <!-- Text Side -->
+      <div class="text-gray-700 space-y-6 leading-relaxed text-lg">
+        <p>
+          Wall putty is the <strong>key base material</strong> that prepares your walls 
+          for a smooth and long-lasting paint finish. At PaintPro, we use only 
+          <span class="text-purple-600 font-semibold">premium quality wall putty</span> 
+          to ensure durability and perfection in every project.
+        </p>
+
+        <p>
+          Our expert application ensures walls are <strong>crack-free, moisture-resistant, 
+          and perfectly smooth</strong>, providing the ideal foundation for all types of paints. 
+          Whether it’s your dream home, office, or commercial building – 
+          a strong base means a stunning finish.
+        </p>
+
+        <ul class="list-disc list-inside space-y-2">
+          <li>✔️ Smooth & flawless wall surface</li>
+          <li>✔️ Protects walls from moisture & dampness</li>
+          <li>✔️ Enhances paint durability & brightness</li>
+          <li>✔️ Long-lasting and cost-effective solution</li>
+        </ul>
+
+        <a href="enquiry.html" 
+           class="inline-block mt-6 bg-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-700 transition">
+          Get Wall Putty Service
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Gallery Preview Section -->
+<section class="py-16 container mx-auto px-4">
+  <h2 class="text-2xl md:text-3xl font-bold text-purple-600 text-center mb-8">Our Projects</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <img src="asset/indorepage.jpg" alt="Project 1" class="rounded-xl shadow-lg object-cover h-48 w-full hover:scale-105 transform transition-transform duration-300 cursor-pointer">
+    <img src="asset/Exterior paint img.jpg" alt="Project 2" class="rounded-xl shadow-lg object-cover h-48 w-full hover:scale-105 transform transition-transform duration-300 cursor-pointer">
+    <img src="asset/interior img.jfif" alt="Project 3" class="rounded-xl shadow-lg object-cover h-48 w-full hover:scale-105 transform transition-transform duration-300 cursor-pointer">
+  </div>
+</section>
+
+
+
+
+<!-- Enquiry CTA Section -->
+<section class="py-16 text-center bg-purple-600 text-white">
+  <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Space?</h2>
+  <p class="mb-6 text-sm md:text-base max-w-xl mx-auto">Get a free estimate and consultation from our experts today.</p>
+  <a href="enquiry.html" class="bg-white text-purple-600 font-semibold px-6 py-2 rounded-full hover:bg-purple-100 transition-colors duration-300">Submit Enquiry</a>
+</section>
+
+<!-- Footer -->
+<footer class="bg-purple-600 text-white py-8 mt-12">
+  <div class="container mx-auto text-center">
+    <p>© 2025 PaintPro - Professional Painting Services. All rights reserved. <br>Devloped by - Bhushan S. Chaudhari Contact:+91 7385173795</p>
+    <div class="flex justify-center space-x-4 mt-4">
+      <a href="#"><img src="assets/icons/facebook.png" class="w-6 h-6"></a>
+      <a href="#"><img src="assets/icons/instagram.png" class="w-6 h-6"></a>
+      <a href="#"><img src="assets/icons/twitter.png" class="w-6 h-6"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollSmoother);
+
+  // Enable smooth scrolling
+  ScrollSmoother.create({
+    wrapper: "body",    // your wrapper element
+    content: "body",    // your content element
+    smooth: 1.5,        // higher = smoother
+    effects: true       // allow effects like parallax
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paint Work Enquiry</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #f3e8ff, #e0f2fe);
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #6b21a8;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+      color: #374151;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 5px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124,58,237,0.2);
+      outline: none;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #7c3aed;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #5b21b6;
+    }
+    #msg {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: #059669;
+    }
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background: #f3f4f6;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #374151;
+      transition: all 0.3s;
+    }
+
+    #back{
+      background-color: #a673ff33;
+      padding: 15px;
+      border-radius: 50%;
+    }
+    .back-home:hover {
+      background: #e5e7eb;
+      color: #7c3aed;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin-top: 20px;
+      }
+    #leadForm{
+        margin-right: 20px
+    }
+    
+  }
+  </style>
+</head>
+<body>
+  <a href="index.html" id="back"><i class="fa-solid fa-arrow-left-long" ></i></a>
+  <div class="container">
+    <img src="asset/logo.png" style="height: 50px; align-self: center; justify-self: center;" alt="">
+    <h2>🎨 Paint Work Enquiry</h2>
+    <form id="leadForm">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Mobile No:</label>
+      <input type="tel" name="mobile" required pattern="[0-9]{10}" placeholder="10 digit mobile no">
+
+      <label>Address Details:</label>
+      <textarea name="address" required rows="3"></textarea>
+
+      <label>Work Type:</label>
+      <select name="workType" required>
+        <option value="">-- Select --</option>
+        <option>Home</option>
+        <option>Shop</option>
+        <option>Industrial</option>
+        <option>Sign Board</option>
+        <option>Building Paint</option>
+      </select>
+
+      <label>Message:</label>
+      <textarea name="message" rows="3"></textarea>
+
+      <button type="submit">🚀 Submit Enquiry</button>
+    </form>
+    <div id="msg"></div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-home">⬅️ Back to Homepage</a>
+  </div>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      msg.textContent = 'Sending...';
+      msg.style.color = '#374151';
+
+      const formData = {
+        name: this.name.value,
+        mobile: this.mobile.value,
+        address: this.address.value,
+        workType: this.workType.value,
+        message: this.message.value
+      };
+
+      try {
+        const res = await fetch('/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+          alert(data.message);
+          msg.textContent = '✔️ Enquiry saved successfully!';
+          msg.style.color = '#059669';
+          form.reset();
+        } else {
+          throw new Error(data.error || 'Error occurred');
+        }
+      } catch (err) {
+        msg.style.color = 'red';
+        msg.textContent = `❌ Error: ${err.message}`;
+      }
+    });
+  </script>
+</body>
+</html>
