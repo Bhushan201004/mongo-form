@@ -11,37 +11,38 @@
   <!-- Navbar -->
 <nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-    <a href="index.html" class="text-2xl font-bold text-purple-600 hover:text-purple-700 transition-colors duration-300"><img src="asset/logo.png" alt="" style="height: 70px;
-    "></a>
+    
+    <!-- Logo -->
+    <a href="index.html">
+      <img src="asset/logo.png" alt="Logo" class="h-16">
+    </a>
+
+    <!-- Desktop Menu -->
     <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
       <li><a href="index.html" class="text-purple-600 font-semibold hover:text-purple-700">Home</a></li>
-      <li><a href="about.html" class="hover:text-purple-600 transition-colors duration-300">About</a></li>
-      <li><a href="gallery.html" class="hover:text-purple-600 transition-colors duration-300">Gallery</a></li>
-      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
-      <li><a href="enquiry.html" id="lang-toggle" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for Call</a></li>
+      <li><a href="about.html" class="hover:text-purple-600">About</a></li>
+      <li><a href="gallery.html" class="hover:text-purple-600">Gallery</a></li>
+      <li><a href="enquiry.html" class="hover:text-purple-600">Enquiry</a></li>
+      <li><a href="enquiry.html" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for Call</a></li>
     </ul>
+
+    <!-- Hamburger Button -->
     <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-      <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-lg transform scale-y-0 origin-top transition-transform duration-300">
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white/95 shadow-lg">
     <ul class="flex flex-col space-y-2 px-6 py-4 font-medium text-gray-700">
       <li><a href="index.html" class="text-purple-600 font-semibold">Home</a></li>
-      <li><a href="about.html" class="hover:text-purple-600 transition-colors duration-300">About</a></li>
-      <li><a href="gallery.html" class="hover:text-purple-600 transition-colors duration-300">Gallery</a></li>
-      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
-      <li><button id="lang-toggle-mobile" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for call</button></li>
-    </ul>
-  </div>
-  <div id="menu" class="hidden md:hidden bg-white shadow-md">
-    <ul class="flex flex-col space-y-4 px-6 py-4 text-center font-medium">
-      <li><a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a></li>
-      <li><a href="about.html" class="text-gray-700 hover:text-purple-600 transition">About</a></li>
-      <li><a href="gallery.html" class="text-gray-700 hover:text-purple-600 transition">Gallery</a></li>
-      <li><a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a></li>
+      <li><a href="about.html" class="hover:text-purple-600">About</a></li>
+      <li><a href="gallery.html" class="hover:text-purple-600">Gallery</a></li>
+      <li><a href="enquiry.html" class="hover:text-purple-600">Enquiry</a></li>
+      <li><button class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white">Request for Call</button></li>
     </ul>
   </div>
 </nav>
@@ -144,16 +145,11 @@
   <!-- Script for Menu -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    const menuIcon = document.getElementById('menu-icon');
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-      if (!menu.classList.contains('hidden')) {
-        menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
-      } else {
-        menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
-      }
-    });
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
   </script>
 </body>
 </html>

@@ -1,141 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About PaintPro</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-white text-gray-800">
 
-<!-- Navbar -->
-<nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-    <a href="index.html" class="text-2xl font-bold text-purple-600 hover:text-purple-700 transition-colors duration-300"><img src="asset/logo.png" alt="" style="height: 70px;
-    "></a>
-    <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
-      <li><a href="index.html" class=" hover:text-purple-700">Home</a></li>
-      <li><a href="about.html" class="text-purple-600 font-semibold hover:text-purple-600 transition-colors duration-300">About</a></li>
-      <li><a href="gallery.html" class="hover:text-purple-600 transition-colors duration-300">Gallery</a></li>
-      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
-      <li><a href="enquiry.html" id="lang-toggle" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for Call</a></li>
-    </ul>
-    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-      <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-lg transform scale-y-0 origin-top transition-transform duration-300">
-    <ul class="flex flex-col space-y-2 px-6 py-4 font-medium text-gray-700">
-      <li><a href="index.html" class="text-purple-600 font-semibold">Home</a></li>
-      <li><a href="about.html" class="hover:text-purple-600 transition-colors duration-300">About</a></li>
-      <li><a href="gallery.html" class="hover:text-purple-600 transition-colors duration-300">Gallery</a></li>
-      <li><a href="enquiry.html" class="hover:text-purple-600 transition-colors duration-300">Enquiry</a></li>
-      <li><button id="lang-toggle-mobile" class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request for call</button></li>
-    </ul>
-  </div>
-  <div id="menu" class="hidden md:hidden bg-white shadow-md">
-    <ul class="flex flex-col space-y-4 px-6 py-4 text-center font-medium">
-      <li><a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a></li>
-      <li><a href="about.html" class="text-gray-700 hover:text-purple-600 transition">About</a></li>
-      <li><a href="gallery.html" class="text-gray-700 hover:text-purple-600 transition">Gallery</a></li>
-      <li><a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- Navbar -->
+  <nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
 
-<!-- Hero Section -->
-<section class="relative bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white py-32 text-center px-4" style="background-image: url('asset/aboutus.png'); background-size: cover; background-position: center; color: rgb(107, 45, 125); justify-content: left;">
-  <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeIn">About PaintPro</h1>
-  <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">We don’t just paint walls – we transform spaces into elegant, inspiring, and lasting environments.</p>
-</section>
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="asset/logo.png" alt="Logo" class="h-16">
+      </a>
 
-<!-- Our Story -->
-<section class="py-20 container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-  <div>
-    <img src="asset/aboutpaint.png" alt="Our Team" class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-  </div>
-  <div>
-    <h2 class="text-3xl font-bold text-purple-600 mb-4">Our Story</h2>
-    <p class="text-gray-700 mb-4 leading-relaxed">PaintPro started with a mission to bring vibrancy and durability into every project. From small residential homes to large-scale commercial buildings, our skilled professionals have delivered excellence for over a decade.</p>
-    <p class="text-gray-700 mb-4 leading-relaxed">We use eco-friendly paints, cutting-edge tools, and modern techniques to ensure not just beauty, but also strength and long-lasting quality. Our work reflects dedication, precision, and professionalism that speaks louder than words.</p>
-    <a href="enquiry.html" class="bg-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-700 transition">Request a Quote</a>
-  </div>
-</section>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+        <li><a href="index.html" class="text-purple-600 font-semibold hover:text-purple-700">Home</a></li>
+        <li><a href="about.html" class="hover:text-purple-600">About</a></li>
+        <li><a href="gallery.html" class="hover:text-purple-600">Gallery</a></li>
+        <li><a href="enquiry.html" class="hover:text-purple-600">Enquiry</a></li>
+        <li><a href="enquiry.html"
+            class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white transition-colors duration-300">Request
+            for Call</a></li>
+      </ul>
 
-<!-- Why Choose Us -->
-<section class="py-20 bg-purple-50">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-purple-600 mb-12">Why Choose PaintPro?</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-purple-600 mb-2">Premium Quality</h3>
-        <p class="text-gray-600 text-sm">We use only trusted brands and weatherproof paints for long-lasting durability and finish.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-purple-600 mb-2">Professional Team</h3>
-        <p class="text-gray-600 text-sm">Our skilled painters combine creativity with precision to deliver flawless results every time.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-purple-600 mb-2">On-Time Delivery</h3>
-        <p class="text-gray-600 text-sm">We value your time – every project is completed with efficiency without compromising quality.</p>
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 shadow-lg">
+      <ul class="flex flex-col space-y-2 px-6 py-4 font-medium text-gray-700">
+        <li><a href="index.html" class="text-purple-600 font-semibold">Home</a></li>
+        <li><a href="about.html" class="hover:text-purple-600">About</a></li>
+        <li><a href="gallery.html" class="hover:text-purple-600">Gallery</a></li>
+        <li><a href="enquiry.html" class="hover:text-purple-600">Enquiry</a></li>
+        <li><button class="bg-purple-100 text-purple-700 px-3 py-1 rounded hover:bg-purple-600 hover:text-white">Request
+            for Call</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="relative bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white py-32 text-center px-4"
+    style="background-image: url('asset/aboutus.png'); background-size: cover; background-position: center; color: rgb(107, 45, 125); justify-content: left;">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeIn">About PaintPro</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">We don’t just paint walls – we transform spaces into
+      elegant, inspiring, and lasting environments.</p>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-20 container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="asset/aboutpaint.png" alt="Our Team"
+        class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold text-purple-600 mb-4">Our Story</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">PaintPro started with a mission to bring vibrancy and durability
+        into every project. From small residential homes to large-scale commercial buildings, our skilled professionals
+        have delivered excellence for over a decade.</p>
+      <p class="text-gray-700 mb-4 leading-relaxed">We use eco-friendly paints, cutting-edge tools, and modern
+        techniques to ensure not just beauty, but also strength and long-lasting quality. Our work reflects dedication,
+        precision, and professionalism that speaks louder than words.</p>
+      <a href="enquiry.html"
+        class="bg-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-700 transition">Request a
+        Quote</a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-purple-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-purple-600 mb-12">Why Choose PaintPro?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-purple-600 mb-2">Premium Quality</h3>
+          <p class="text-gray-600 text-sm">We use only trusted brands and weatherproof paints for long-lasting
+            durability and finish.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-purple-600 mb-2">Professional Team</h3>
+          <p class="text-gray-600 text-sm">Our skilled painters combine creativity with precision to deliver flawless
+            results every time.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-purple-600 mb-2">On-Time Delivery</h3>
+          <p class="text-gray-600 text-sm">We value your time – every project is completed with efficiency without
+            compromising quality.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Vision -->
-<section class="py-20 container mx-auto px-6 text-center">
-  <h2 class="text-3xl font-bold text-purple-600 mb-6">Our Vision & Mission</h2>
-  <p class="text-gray-700 max-w-3xl mx-auto mb-4">Our vision is to become the most trusted name in painting services, known for transforming ordinary walls into extraordinary experiences.</p>
-  <p class="text-gray-700 max-w-3xl mx-auto">Our mission is simple – to blend expertise, creativity, and premium materials to bring our clients' dreams to life with every project.</p>
-</section>
+  <!-- Vision -->
+  <section class="py-20 container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-purple-600 mb-6">Our Vision & Mission</h2>
+    <p class="text-gray-700 max-w-3xl mx-auto mb-4">Our vision is to become the most trusted name in painting services,
+      known for transforming ordinary walls into extraordinary experiences.</p>
+    <p class="text-gray-700 max-w-3xl mx-auto">Our mission is simple – to blend expertise, creativity, and premium
+      materials to bring our clients' dreams to life with every project.</p>
+  </section>
 
-<!-- Owner Section -->
-<section class="py-20 bg-purple-50" >
-  <div class="container mx-auto w-320 px-6 text-center">
-    <h2 class="text-3xl font-bold text-purple-600 mb-12">Meet Our Founder</h2>
-    <div class="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition">
-      <img src="asset/owner.jpg" alt="Sahebrao K. Chaudhari" 
-           class="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-md">
-      <h3 class="text-2xl font-bold text-purple-700">Sahebrao K. Chaudhari</h3>
-      <p class="text-gray-600 font-medium mb-4">Founder & Master Painter</p>
-      <p class="text-gray-700 leading-relaxed">
-        With over <strong>30 years of hands-on experience</strong> in painting and finishing work, 
-        Mr. Chaudhari has transformed countless homes, offices, and commercial spaces with his 
-        unmatched skills and dedication. Known for his precision, professionalism, and commitment 
-        to excellence, he continues to lead PaintPro with passion and vision.
-      </p>
-      <div class="mt-6 flex justify-center space-x-4">
-        <a href="tel:+917385173795" class="bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">Contact</a>
-        <a href="enquiry.html" class="bg-purple-100 text-purple-700 px-5 py-2 rounded-full hover:bg-purple-200 transition">Hire Us</a>
+  <!-- Owner Section -->
+  <section class="py-20 bg-purple-50">
+    <div class="container mx-auto w-320 px-6 text-center">
+      <h2 class="text-3xl font-bold text-purple-600 mb-12">Meet Our Founder</h2>
+      <div class="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition">
+        <img src="asset/owner.jpg" alt="Sahebrao K. Chaudhari"
+          class="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-md">
+        <h3 class="text-2xl font-bold text-purple-700">Sahebrao K. Chaudhari</h3>
+        <p class="text-gray-600 font-medium mb-4">Founder & Master Painter</p>
+        <p class="text-gray-700 leading-relaxed">
+          With over <strong>30 years of hands-on experience</strong> in painting and finishing work,
+          Mr. Chaudhari has transformed countless homes, offices, and commercial spaces with his
+          unmatched skills and dedication. Known for his precision, professionalism, and commitment
+          to excellence, he continues to lead PaintPro with passion and vision.
+        </p>
+        <div class="mt-6 flex justify-center space-x-4">
+          <a href="tel:+917385173795"
+            class="bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">Contact</a>
+          <a href="enquiry.html"
+            class="bg-purple-100 text-purple-700 px-5 py-2 rounded-full hover:bg-purple-200 transition">Hire Us</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Footer -->
-<footer class="bg-purple-600 text-white py-8 mt-16">
-  <div class="container mx-auto text-center">
-    <p>© 2025 PaintPro - Professional Painting Services. All rights reserved.</p>
-    <div class="flex justify-center space-x-4 mt-4">
-      <a href="#" class="hover:opacity-80 transition"><img src="assets/icons/facebook.png" class="w-6 h-6"></a>
-      <a href="#" class="hover:opacity-80 transition"><img src="assets/icons/instagram.png" class="w-6 h-6"></a>
-      <a href="#" class="hover:opacity-80 transition"><img src="assets/icons/twitter.png" class="w-6 h-6"></a>
+  <!-- Footer -->
+  <footer class="bg-purple-600 text-white py-8 mt-16">
+    <div class="container mx-auto text-center">
+      <p>© 2025 PaintPro - Professional Painting Services. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" class="hover:opacity-80 transition"><img src="assets/icons/facebook.png" class="w-6 h-6"></a>
+        <a href="#" class="hover:opacity-80 transition"><img src="assets/icons/instagram.png" class="w-6 h-6"></a>
+        <a href="#" class="hover:opacity-80 transition"><img src="assets/icons/twitter.png" class="w-6 h-6"></a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
   });
-</script>
+  </script>
 
 </body>
+
 </html>
