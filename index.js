@@ -1,28 +1,25 @@
-require('dotenv').config();        // 1) Load .env first
 const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config(); // load .env
 
 const app = express();
 
-// 2) Serve static files from /public
-app.use(express.static(path.join(__dirname, 'public')));
-
-// 3) Parse JSON bodies
+// Parse JSON bodies
 app.use(express.json());
 
-// 4) Connect to MongoDB Atlas
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('✅ MongoDB connected'))
-.catch(err => {
-  console.error('❌ MongoDB connection error:', err.message);
-  process.exit(1);
-});
+// Serve static files from /public
+app.use(express.static(path.join(__dirname, 'public')));
 
-// 5) Define schema and model for paint enquiry
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => {
+    console.error('MongoDB connection error:', err);
+    process.exit(1);
+  });
+
+// Lead schema
 const leadSchema = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
   mobile: { type: String, required: true },
@@ -38,18 +35,16 @@ const leadSchema = new mongoose.Schema({
 
 const Lead = mongoose.model('Lead', leadSchema);
 
-// 6) POST /lead -> receive enquiry and save
+// POST /lead
 app.post('/lead', async (req, res) => {
   try {
     const { name, mobile, address, workType, message } = req.body;
-
     if (!name || !mobile || !address || !workType) {
       return res.status(400).json({ error: 'कृपया सर्व आवश्यक माहिती भरा' });
     }
 
     const lead = new Lead({ name, mobile, address, workType, message });
     await lead.save();
-
     res.status(201).json({ 
       success: true, 
       message: 'धन्यवाद 🙏 आम्ही 1-2 दिवसात call करू!' 
@@ -60,14 +55,17 @@ app.post('/lead', async (req, res) => {
   }
 });
 
-// 7) GET /leads -> list all enquiries
+// GET /leads
 app.get('/leads', async (req, res) => {
   const leads = await Lead.find().sort({ createdAt: -1 });
   res.json(leads);
 });
 
-// 8) Start server
-const PORT = process.env.PORT || 3000;   // deploy-friendly
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+// For all other routes, serve index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
+// Start server (Render uses PORT env variable)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
